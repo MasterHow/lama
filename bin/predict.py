@@ -35,7 +35,8 @@ from saicinpainting.utils import register_debug_signal_handlers
 LOGGER = logging.getLogger(__name__)
 
 
-@hydra.main(config_path='../configs/prediction', config_name='default.yaml')
+# @hydra.main(config_path='../configs/prediction', config_name='default.yaml')
+@hydra.main(config_path='../configs/prediction', config_name='KEX.yaml')
 def main(predict_config: OmegaConf):
     try:
         register_debug_signal_handlers()  # kill -10 <pid> will result in traceback dumped into log
